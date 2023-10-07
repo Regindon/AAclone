@@ -7,7 +7,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     
-    [SerializeField] private float speed = 5f;
+    [SerializeField] private float speed = 11f;
     [HideInInspector] public bool stopped = true;
     
     public GameObject midCircle;
@@ -37,12 +37,16 @@ public class Projectile : MonoBehaviour
         //transform.position = Vector2.zero;
         if (other.gameObject.CompareTag("MidCircle"))
         {
+            //setting parent
             transform.SetParent(other.gameObject.transform);
+            transform.tag = "Point";
             _attached = true;
+            
         }
-        else
+        else if (other.gameObject.CompareTag("Point"))
         {
-            GameManager.Instance.gameState = GameState.gameLost;
+            Debug.Log("projectile touched point");
+            GameManager.Instance.gameStateEvent.ChangeGameState(GameState.gameLost);
         }
     }
     

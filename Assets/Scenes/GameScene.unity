@@ -397,6 +397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1576475672}
   - component: {fileID: 1576475671}
+  - component: {fileID: 1576475673}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -417,6 +418,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameState: 0
+  levelDetailsSOArray:
+  - {fileID: 11400000, guid: 75c73e395d81eec45851b66e800e9d47, type: 2}
+  lvlDetails: {fileID: 0}
   pointInfoArray: 020000000400000006000000080000000a000000
   projectileInfoArray: 0500000008000000080000000800000008000000
   midCirclePrefab: {fileID: 1231207822065368958, guid: e100811c905371f438e39cc897bdea56, type: 3}
@@ -436,3 +440,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1576475673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576475670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de70fe93f4d622b40bc5f011e231fc20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

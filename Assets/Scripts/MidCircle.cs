@@ -14,7 +14,7 @@ public class MidCircle : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.gameState != GameState.gamePlaying) return;
+        if (GameManager.Instance.gameStateEvent.CurrentState != GameState.gamePlaying) return;
         
         transform.Rotate(0f, 0f, rotationSpeed * Time.deltaTime);
         
